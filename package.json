@@ -12,9 +12,12 @@
     "test": "run-p --race dev cy:run"
   },
   "dependencies": {
+    "@fortawesome/free-regular-svg-icons": "^5.10.2",
+    "@fortawesome/free-solid-svg-icons": "^5.10.2",
     "compression": "^1.7.1",
     "polka": "next",
-    "sirv": "^0.4.0"
+    "sirv": "^0.4.0",
+    "svelte-awesome": "^2.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

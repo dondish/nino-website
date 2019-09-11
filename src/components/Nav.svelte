@@ -66,6 +66,7 @@
 			visibility: visible;
 		}
 		.ulm {
+			padding: 0;
 			width: 100%;
 		}
 		.ulm li:last-child {
@@ -75,6 +76,9 @@
 			visibility: hidden;
 		}
 		.menu {
+			color: white;
+			background: none;
+			border: none;
 			width: 50px;
 			height: 50px;
 		}
@@ -83,7 +87,7 @@
 
 <nav>
 	<ul class="ulm">
-		<li class="mobile"><button onclick={onClick}><img class="menu" src="menu.svg", alt="menu"></button></li>
+		<li class="mobile"><button class="menu" onclick={onClick}><Icon data={faBars} /></button></li>
 		<li><a href="."><img src="nino.png" alt="Nino"/></a></li>
 	</ul>
 	<ul class="ulr">
@@ -96,6 +100,8 @@
 
 <script>
 export let segment;
+import Icon from 'svelte-awesome/components/Icon.svelte'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 function onClick(event) {
 
