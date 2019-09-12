@@ -143,19 +143,19 @@
 	<ul 
 	class="ulr" 
 	use:pannable 
-	style="transform: translate({$anim-250}px, 0)"
+	style="transform: translate({$anim-251}px, 0)"
 	on:panmove={handlePanMove} 
 	on:panend={handlePanEnd}>
 		<li><a in:fade href=".">Nino</a></li>
 		<li><a in:fly="{{ y: 200, duration: 2000 }}" class:selected={ !segment } href='.'>Home</a></li>
-		<li><a in:fly="{{ y: 200, duration: 2000 }}" class:selected={ segment === "about" } href='about'>About</a></li>
+		<li><a in:fly="{{ y: 200, duration: 2000 }}" class:selected={ segment === "features" } href='features'>Features</a></li>
 		<li><a in:fly="{{ y: 200, duration: 2000 }}" class:selected={ segment === "docs" } href='docs'>Documentation</a></li>
 		<li><a in:fly="{{ y: 200, duration: 2000 }}" class:selected={ segment === "dashboard" } href='dashboard'>Dashboard</a></li>
 	</ul>
 	{:else}
 	<ul class="ulr">
 		<li><a class:selected={ !segment } href='.'>Home</a></li>
-		<li><a class:selected={ segment === "about" } href='about'>About</a></li>
+		<li><a class:selected={ segment === "features" } href='features'>Features</a></li>
 		<li><a class:selected={ segment === "docs" } href='docs'>Documentation</a></li>
 		<li><a class:selected={ segment === "dashboard" } href='dashboard'>Dashboard</a></li>
 	</ul>
@@ -194,12 +194,12 @@ const anim = tweened(0, {
 });
 
 function handlePanMove(event) {
-	anim.update($anim => Math.min(250, $anim + event.detail.dx))
+	anim.update($anim => Math.min(251, $anim + event.detail.dx))
 }
 
 function handlePanEnd(event) {
 	if ($anim > 125) {
-		anim.set(250);
+		anim.set(251);
 	} else {
 		anim.set(0);
 	}
@@ -207,6 +207,6 @@ function handlePanEnd(event) {
 
 function onclick(event) {
 	event.preventDefault();
-	anim.update($anim => Math.abs($anim-250));
+	anim.update($anim => Math.abs($anim-251));
 }
 </script>

@@ -97,7 +97,7 @@ export function pannable(node) {
 	return {
 		destroy() {
             node.removeEventListener('mousedown', handleMousedown);
-            node.removeEventListener('touchend', handleTouchEnd);
+            node.removeEventListener('touchstart', handleTouchEnd);
 		}
 	};
 }
