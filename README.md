@@ -1,9 +1,10 @@
-# Nino's Website - WIP
+# Nino's Website - WIP [![Build status](https://ci.appveyor.com/api/projects/status/f96bto4oodgi2rdw?svg=true)](https://ci.appveyor.com/project/dondish/nino-website)
 
 To clone the project:
 
 ```bash
 git clone https://github.com/dondish/nino-website
+cd nino-website
 npm install # or yarn!
 npm run dev # or yarn dev!
 ```
