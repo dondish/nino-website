@@ -10,6 +10,9 @@
 		padding: 0 1em;
 		background-color: #db0485
 	}
+	nav.dark {
+		background-color: #7100c1;
+	}
 	ul {
   		list-style-type: none;
 		height: 60px;
@@ -108,6 +111,10 @@
 			height: calc(100% - 62px);
 			float: initial;
 		}
+		nav.dark .ulr {
+			background-color: #333;
+			border-right: white;
+		}
 		.ulr li {
 			width: 250px;
 			margin: 0;
@@ -127,6 +134,10 @@
 			border-right: none;
 			display: block;
 		}
+		nav.dark .ulr li a {
+			color: white;
+			border-bottom: 1px white dotted;
+		}
 		.ulr li:first-child a {
 			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 			font-size: 48px;
@@ -134,10 +145,13 @@
 	}
 </style>
 <svelte:window bind:innerWidth={width} />
-<nav>
+<nav class:dark={$darkmode}>
 	<ul class="ulm">
-		<li class="mobile"><button class="menu" on:click={onclick}><Icon data={data} /></button></li>
-		<li><a href="."><img src="nino.png" alt="Nino"/></a></li>
+		<li class="mobile"><button aria-label="Menu" class="menu" on:click={onclick}><Icon data={data} /></button></li>
+		<li><a href="."><picture>
+			<source srcset="nino.webp" type="image/webp" />
+			<img src="nino.png" alt="Nino" />
+		</picture></a></li>
 	</ul>
 	{#if isMobile}
 	<ul 
@@ -164,6 +178,7 @@
 
 <script>
 export let segment;
+export let darkmode;
 import { pannable } from './pannable.js'
 import { tweened } from 'svelte/motion';
 import { cubicOut } from 'svelte/easing';

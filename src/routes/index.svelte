@@ -3,13 +3,13 @@
 	
 	.index {
 		margin: auto;
-		width: 1024px;
+		width: 1256px;
 	}
 
 	.ninointro {
 		display: block;
 		float: right;
-		width: 434px;
+		width: 441px;
 		margin-left: 24px;
 	}
 
@@ -30,13 +30,18 @@
 
 	.description a {
 		margin-left: 2px;
-		padding: 3px 0.5em;
-		background-color: #db0485;
-		color: white;
-		text-decoration: none;
-		border-radius: 5%;
+		text-decoration: #db0485 solid underline;
 	}
-	@media screen and (max-width: 1024px) {
+	.description a:hover {
+		color: #db0485;
+	}
+	.dark .description a {
+		text-decoration: #7100c1 solid underline;
+	}
+	.dark .description a:hover {
+		color: #7100c1;
+	}
+	@media screen and (max-width: 1256px) {
 		.index {
 			width: inherit;
 		}
@@ -46,7 +51,7 @@
 			margin: 0 10%;
 		}
 	}
-	@media screen and (max-width: 566px) {
+	@media screen and (max-width: 791px) {
 		img {
     		max-width: 100%;
 			height: auto;
@@ -56,22 +61,32 @@
 
 <svelte:head>
 	<title>Nino - Discord Moderation Bot</title>
+	<meta property="og:title" content="Nino - Discord Moderation Bot" />
 </svelte:head>
 
-<div class="index">
+<div class="index" class:dark={$darkmode}>
 	<div class="ninointro">
 		<h1>Hi, I'm Nino</h1>
 		<p class="description">
-		Nino is a Discord bot focused on providing servers top notch moderation.
-		Once you add Nino to your server your mods will no longer moderate by themselves!
-		Nino can detect many offenses made by guests and even automatically punish them!
-		Nino is the new friend of your moderators and it has a lot of features! Check them out <a href="/features">here</a>
+		Nino is a Discord bot focused on providing servers top-notch moderation. 
+		Once you add Nino to your server, your mods will no longer moderate by themselves! 
+		Nino can detect many offenses made by guests and punish them accordingly! 
+		All without any mod doing anything! 
+		Nino is the new friend of your moderators and it has a lot of features! 
+		Check them out <a href="/features">here.</a>
 		<br><br>
-		Nino is fully open-source under the MIT license. Check out the code<a href="https://github.com/auguwu/nino">here</a>
+		Nino is fully open-source under the MIT license. Check out the code <a href="https://github.com/auguwu/nino">here.</a>
 		</p>
 	</div>
 	<div class="banner">
-		<img src="ninobanner.png" alt="Nino Banner" />
+		<picture>
+			<source srcset="ninobanner.webp" type="image/webp" />
+			<img src="ninobanner.png" alt="Nino Banner" />
+		</picture>
 	</div>
 </div>
 
+<script>
+import {getContext} from 'svelte';
+let darkmode = getContext('darkmode')
+</script>

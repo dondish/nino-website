@@ -4,11 +4,11 @@ describe('Sapper template app', () => {
 	});
 
 	it('has the correct <h1>', () => {
-		cy.contains('h1', 'Great success!')
+		cy.contains('h1', 'Hi, I\'m Nino')
 	});
 
 	it('navigates to /about', () => {
-		cy.get('nav a').contains('about').click();
+		cy.get('nav a').contains('Features').click();
 		cy.url().should('include', '/about');
 	});
 
