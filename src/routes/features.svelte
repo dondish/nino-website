@@ -1,6 +1,4 @@
 <style>
-	@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Gayathri|Lobster|Pacifico&display=swap');
-	
 	.index {
 		margin: auto;
 		width: 1256px
@@ -19,7 +17,7 @@
 	}
 
 	.featuredesc {
-		max-width: 49%;
+		max-width: 47%;
 		padding: 5px;
 		display: inline-block;
 	}
@@ -37,7 +35,7 @@
 	.feature img {
 		border: 3px white solid;
 		border-radius: 1%;
-		max-width: 49%;
+		max-width: 47%;
 		height: auto;
 		display: inline-block;
   		box-shadow: 3px 6px 9px #888888;
@@ -89,7 +87,7 @@
 		</div>
 		<picture>
 			<source srcset="feature1.webp" type="image/webp" />
-			<img src="feature1.png" alt="Advanced Moderation Utilities" />
+			<img class="fleft" src="feature1.png" alt="Advanced Moderation Utilities" />
 		</picture>
 	</div>
 	<div class="feature">
@@ -99,7 +97,7 @@
 		</div>
 		<picture>
 			<source srcset="feature2.webp" type="image/webp" />
-			<img src="feature2.png" alt="Detailed Log" />
+			<img class="fright" src="feature2.png" alt="Detailed Log" />
 		</picture>
 	</div>
 	<div class="feature">
@@ -109,7 +107,7 @@
 		</div>
 		<picture>
 			<source srcset="feature3.webp" type="image/webp" />
-			<img src="feature3.png" alt="Warnings" />
+			<img class="fleft" src="feature3.png" alt="Warnings" />
 		</picture>
 	</div>
 	<div class="feature">
@@ -119,7 +117,7 @@
 		</div>
 		<picture>
 			<source srcset="feature4.webp" type="image/webp" />
-			<img src="feature4.png" alt="Auto-Moderation" />
+			<img class="fright" src="feature4.png" alt="Auto-Moderation" />
 		</picture>
 	</div>
 </div>

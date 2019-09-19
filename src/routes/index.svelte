@@ -1,6 +1,4 @@
 <style>
-	@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Gayathri|Lobster|Pacifico&display=swap');
-	
 	.index {
 		margin: auto;
 		width: 1256px;

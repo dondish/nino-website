@@ -160,11 +160,11 @@
 	style="transform: translate({$anim-251}px, 0)"
 	on:panmove={handlePanMove} 
 	on:panend={handlePanEnd}>
-		<li><a in:fade href=".">Nino</a></li>
-		<li><a in:fly="{{ y: 200, duration: 2000 }}" class:selected={ !segment } href='.'>Home</a></li>
-		<li><a in:fly="{{ y: 200, duration: 2000 }}" class:selected={ segment === "features" } href='features'>Features</a></li>
-		<li><a in:fly="{{ y: 200, duration: 2000 }}" class:selected={ segment === "docs" } href='docs'>Documentation</a></li>
-		<li><a in:fly="{{ y: 200, duration: 2000 }}" class:selected={ segment === "dashboard" } href='dashboard'>Dashboard</a></li>
+		<li><a href=".">Nino</a></li>
+		<li><a class:selected={ !segment } href='.'>Home</a></li>
+		<li><a class:selected={ segment === "features" } href='features'>Features</a></li>
+		<li><a class:selected={ segment === "docs" } href='docs'>Documentation</a></li>
+		<li><a class:selected={ segment === "dashboard" } href='dashboard'>Dashboard</a></li>
 	</ul>
 	{:else}
 	<ul class="ulr">
@@ -182,7 +182,6 @@ export let darkmode;
 import { pannable } from './pannable.js'
 import { tweened } from 'svelte/motion';
 import { cubicOut } from 'svelte/easing';
-import { fly, fade } from 'svelte/transition';
 import Icon from 'svelte-awesome/components/Icon.svelte'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 
@@ -193,15 +192,6 @@ let ulrloaded = false;
 
 let ulrvisible = false;
 $: data = ulrvisible ? faTimes : faBars;
-
-function smoothMove(node, {delay = 0, duration = 400}) {
-	const w = +getComputedStyle(node).width
-	return {
-		delay,
-		duration,
-		css: t => `width: ${t*width}`
-	}
-}
 
 const anim = tweened(0, {
 	duration: 400,

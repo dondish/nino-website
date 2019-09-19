@@ -14,7 +14,7 @@ footer.dark {
 <span>Nino© 2019-2020</span><br>
 <span>Made with <Icon data={faHeart}/> using Svelte</span><br>
 <span>Nino is not in any way affiliated with Discord Inc. Nakano Nino is a property of Kodansha Ltd.</span><br>
-<span>Dark Mode: <Switch bind:checked={$darkmode} /></span>
+<span style="line-height: 31px;">Dark Mode: <Switch bind:checked={$darkmode} /></span>
 </footer>
 
 <script>
