@@ -58,6 +58,11 @@
     }
 </style>
 
+<svelte:head>
+	<title>Documentation - Nino - Discord Moderation Bot</title>
+	<meta property="og:title" content="Documentation - Nino - Discord Moderation Bot" />
+</svelte:head>
+
 <div class="index" class:dark={$darkmode}>
     <h1>How Can We Help You Today?</h1>
     <div class="links">
