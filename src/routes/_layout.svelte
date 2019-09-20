@@ -17,7 +17,7 @@
 
 <style>
 	main {
-		min-height: calc(100vh - 153px);
+		min-height: calc(100vh - 188px);
 		position: relative;
 		max-width: 100%;
 		background-color: #edd0e0;
