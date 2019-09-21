@@ -11,7 +11,8 @@
 		})
 		onDestroy(unsub);
 	}
-	
+	let menuon = writable(false);
+	let window = null;
 	setContext('darkmode', darkmode);
 </script>
 
@@ -25,15 +26,18 @@
 		margin: 0 auto;
 		box-sizing: border-box;
 	}
+	.menuon {
+		overflow-y: hidden;
+	}
 	.dark {
 		color: white;
 		background-color: #333;
 	}
 </style>
 
-<Nav {darkmode} {segment}/>
+<Nav {darkmode} {segment} bind:menuon={$menuon}/>
 
-<main class:dark={$darkmode}>
+<main class:menuon={$menuon} class:dark={$darkmode}>
 	<slot {darkmode}></slot>
 </main>
 

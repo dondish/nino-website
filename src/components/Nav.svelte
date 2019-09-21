@@ -144,7 +144,15 @@
 		}
 	}
 </style>
-<svelte:window bind:innerWidth={width} />
+
+<svelte:window 
+bind:innerWidth={width} 
+on:keydown={dependify(() => $menuon, preventDefaultForScrollKeys)} 
+on:wheel={dependify(() => $menuon, preventDefault)} 
+on:touchmove={dependify(() => $menuon, preventDefault)} 
+on:mousewheel={dependify(() => $menuon, preventDefault)} 
+/>
+
 <nav class:dark={$darkmode}>
 	<ul class="ulm">
 		<li class="mobile"><button aria-label="Menu" class="menu" on:click={onclick}><Icon data={data} /></button></li>
@@ -179,9 +187,20 @@
 <script>
 export let segment;
 export let darkmode;
-import { pannable } from './pannable.js'
+
 import { tweened } from 'svelte/motion';
 import { cubicOut } from 'svelte/easing';
+
+const anim = tweened(0, {
+	duration: 400,
+	easing: cubicOut
+});
+
+import { derived } from 'svelte/store';
+
+export const menuon = derived(anim, $anim => $anim > 0);
+
+import { pannable } from './pannable.js'
 import Icon from 'svelte-awesome/components/Icon.svelte'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 
@@ -193,10 +212,6 @@ let ulrloaded = false;
 let ulrvisible = false;
 $: data = ulrvisible ? faTimes : faBars;
 
-const anim = tweened(0, {
-	duration: 400,
-	easing: cubicOut
-});
 
 function handlePanMove(event) {
 	anim.update($anim => Math.min(251, $anim + event.detail.dx))
@@ -214,4 +229,26 @@ function onclick(event) {
 	event.preventDefault();
 	anim.update($anim => Math.abs($anim-251));
 }
+
+
+const keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+function preventDefault(e) {
+	e = e || window.event;
+	if (e.preventDefault)
+		e.preventDefault();
+	e.returnValue = false;  
+}
+
+function preventDefaultForScrollKeys(e) {
+	if (keys[e.keyCode]) {
+		preventDefault(e);
+		return false;
+	}
+}
+
+function dependify(check, func) {
+	return (e) => { if (check()) func(e) } 
+}
 </script>
+

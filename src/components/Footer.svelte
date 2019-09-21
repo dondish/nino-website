@@ -8,14 +8,11 @@ footer {
 footer.dark {
     background-color: #7100c1;
 }
-.icon {
-    top: 3px;
-}
 </style>
 
 <footer class:dark={$darkmode}>
 <span>Nino© 2019-2020</span><br>
-<span>Made with <Icon class="icon" scale="1.3125" data={faHeart} label="Love"/> using Svelte</span><br>
+<span>Made with <Icon style="line-height: 21px;" data={faHeart} label="Love"/> using Svelte</span><br>
 <span>Nino is not in any way affiliated with Discord Inc. Nakano Nino is a property of Kodansha Ltd.</span><br>
 <span style="line-height: 31px;">Dark Mode: <Switch bind:checked={$darkmode} /></span>
 </footer>
