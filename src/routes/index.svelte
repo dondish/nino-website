@@ -12,13 +12,14 @@
 	}
 
 	.ninointro h1 {
+		user-select: none;
 		font-family: 'Pacifico', 'Dancing Script', 'Lobster', cursive;
 		font-size: 42px;
 		text-align: center;
 	}
 
 	.ninointro p {
-		font-family: 'Gayathri', 'Courier New', Courier, monospace;
+		font-family: 'Raleway', sans-serif, serif;
 		text-align: justify;
 	}
 

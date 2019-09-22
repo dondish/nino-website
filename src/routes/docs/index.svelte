@@ -1,5 +1,6 @@
 <style>
 	.index {
+        user-select: none;
 		margin: auto;
 		width: 1256px;
 	}
@@ -8,8 +9,12 @@
 		font-family: 'Pacifico', 'Dancing Script', 'Lobster', cursive;
 		font-size: 42px;
 		text-align: center;
-        margin: 40px 0;
+        margin-bottom: 40px;
 	}
+
+    .index h1:not(:first-child) {
+        margin-top: 32px;
+    }
 
     .links {
         display: grid;
@@ -22,7 +27,7 @@
         color: white;
         background-color: #db0485;
         text-decoration: none;
-		font-family: 'Pacifico', 'Dancing Script', 'Lobster', cursive;
+		font-family: 'Raleway', sans-serif, serif;
         font-size: 32px;
         text-align: center;
         padding: 10px;

@@ -4,7 +4,7 @@
 		display: block;
 		width: inherit;
 		height: 61px;
-		font: 'Overpass', sans-serif; /* I really really like this font :)*/
+		font-family: 'Raleway', sans-serif, serif; /* I really really like this font :)*/
 		border-bottom: 1px solid rgba(255,62,0,0.1);
 		font-weight: 300;
 		padding: 0 1em;
@@ -28,7 +28,6 @@
 		float: left;
 	}
 	li a {
-		padding: auto;
 		color: white;
 		display: block;
 		text-decoration: none;
@@ -40,7 +39,7 @@
 		background-color: white;
 	}
 	.ulr {
-		width: 500px;
+		width: 699px;
 		padding: 0;
 		float: right;
 	}
@@ -49,7 +48,6 @@
 		height: calc(100% - 8px);
 		margin: 3px 0;
 		padding: 0;
-		width: 125px;
 	}
 	.ulr li:last-child a {
 		border-right: none;
@@ -58,7 +56,7 @@
 		width: 124px;
 		border-right: 1px white solid;
 		text-align: center;
-		padding: 8px 0;
+		padding: 8px 25px;
 	}
 	.selected {
 		font-weight: bold;
