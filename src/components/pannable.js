@@ -64,6 +64,7 @@ export function pannable(node) {
     }
 
     function handleTouchMove(event) {
+		event.preventDefault();
         let touches = event.changedTouches;
         let xy = getXYFromTouch(touches);
 		const dx = xy.x - x;

@@ -4,14 +4,14 @@
 		display: block;
 		width: inherit;
 		height: 61px;
-		font-family: 'Raleway', sans-serif, serif; /* I really really like this font :)*/
+		font-family: var(--font-secondary);
 		border-bottom: 1px solid rgba(255,62,0,0.1);
 		font-weight: 300;
 		padding: 0 1em;
-		background-color: #db0485
+		background-color: var(--primary);
 	}
 	nav.dark {
-		background-color: #7100c1;
+		background-color: var(--primary-dark);
 	}
 	ul {
   		list-style-type: none;
@@ -28,7 +28,7 @@
 		float: left;
 	}
 	li a {
-		color: white;
+		color: var(--nav-menu);
 		display: block;
 		text-decoration: none;
 	}
@@ -54,7 +54,7 @@
 	}
 	.ulr li a {
 		width: 124px;
-		border-right: 1px white solid;
+		border-right: 1px var(--nav-menu) solid;
 		text-align: center;
 		padding: 8px 25px;
 	}
@@ -97,11 +97,11 @@
 			height: 50px;
 		}
 		.ulr {
-			border-right: #db0485 1px solid;
+			border-right: var(--primary) 1px solid;
 			top: 62px;
 			padding: 0;
 			position: absolute;
-			background-color: #edd0e0;
+			background-color: var(--bg);
 			display: block;
 			z-index: 99;
 			width: 250px;
@@ -110,8 +110,8 @@
 			float: initial;
 		}
 		nav.dark .ulr {
-			background-color: #333;
-			border-right: white;
+			background-color: var(--bg-dark);
+			border-right: var(--accent-dark);
 		}
 		.ulr li {
 			width: 250px;
@@ -124,20 +124,20 @@
 		}
 		.ulr li a {
 			overflow: hidden;
-			color: #2f0030;
+			color: var(--accent);
 			width: 230px;
-			border-bottom: 1px #db0485 dotted;
+			border-bottom: 1px var(--primary) dotted;
 			padding: 10px 0;
 			margin: 0 10px;
 			border-right: none;
 			display: block;
 		}
 		nav.dark .ulr li a {
-			color: white;
-			border-bottom: 1px white dotted;
+			color: var(--accent-dark);
+			border-bottom: 1px var(--accent-dark) dotted;
 		}
 		.ulr li:first-child a {
-			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			font-family: var(--font-secondary);
 			font-size: 48px;
 		}
 	}
@@ -147,7 +147,6 @@
 bind:innerWidth={width} 
 on:keydown={dependify(() => $menuon, preventDefaultForScrollKeys)} 
 on:wheel={dependify(() => $menuon, preventDefault)} 
-on:touchmove={dependify(() => $menuon, preventDefault)} 
 on:mousewheel={dependify(() => $menuon, preventDefault)} 
 />
 
@@ -200,15 +199,15 @@ export const menuon = derived(anim, $anim => $anim > 0);
 
 import { pannable } from './pannable.js'
 import Icon from 'svelte-awesome/components/Icon.svelte'
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { bars, times } from 'svelte-awesome/icons'
 
 let width;
 $: isMobile = width <= 1000;
 
 let ulrloaded = false;
 
-let ulrvisible = false;
-$: data = ulrvisible ? faTimes : faBars;
+$: ulrvisible = $anim > 0;
+$: data = ulrvisible ? times : bars;
 
 
 function handlePanMove(event) {

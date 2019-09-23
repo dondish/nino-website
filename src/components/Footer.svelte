@@ -2,11 +2,12 @@
 footer {
     padding: 10px;
     text-align: center;
-    background-color: #db0485;
+    background-color: var(--primary);
+    font-family: 'Raleway', sans-serif, serif;
     color: white;
 }
 footer.dark {
-    background-color: #7100c1;
+    background-color: var(--primary-dark);
 }
 </style>
 

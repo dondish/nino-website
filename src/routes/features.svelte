@@ -6,7 +6,7 @@
 
 	.index h1 {
 		user-select: none;
-		font-family: 'Pacifico', 'Dancing Script', 'Lobster', cursive;
+		font-family: var(--font-primary);
 		font-size: 42px;
 		text-align: center;
 	}
@@ -25,12 +25,12 @@
 
 	.featuredesc i {
 		user-select: none;
-		font-family: 'Pacifico', 'Dancing Script', 'Lobster', cursive;
+		font-family: var(--font-primary);
 		font-size: 32px;
 	}
 
 	.featuredesc p {
-		font-family: 'Raleway', sans-serif, serif;
+		font-family: var(--font-secondary);
 		text-align: justify;
 	}
 

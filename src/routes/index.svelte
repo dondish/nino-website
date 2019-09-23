@@ -13,13 +13,13 @@
 
 	.ninointro h1 {
 		user-select: none;
-		font-family: 'Pacifico', 'Dancing Script', 'Lobster', cursive;
+		font-family: var(--font-primary);
 		font-size: 42px;
 		text-align: center;
 	}
 
 	.ninointro p {
-		font-family: 'Raleway', sans-serif, serif;
+		font-family: var(--font-secondary);
 		text-align: justify;
 	}
 
@@ -29,16 +29,16 @@
 
 	.description a {
 		margin-left: 2px;
-		text-decoration: #db0485 solid underline;
+		text-decoration: var(--primary) solid underline;
 	}
 	.description a:hover {
-		color: #db0485;
+		color: var(--primary);
 	}
 	.dark .description a {
-		text-decoration: #7100c1 solid underline;
+		text-decoration: var(--primary-dark) solid underline;
 	}
 	.dark .description a:hover {
-		color: #7100c1;
+		color: var(--primary-dark);
 	}
 	@media screen and (max-width: 1256px) {
 		.index {
