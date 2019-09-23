@@ -1,8 +1,8 @@
 {
-	"background_color": "#ffffff",
-	"theme_color": "#333333",
-	"name": "TODO",
-	"short_name": "TODO",
+	"background_color": "#edd0e0",
+	"theme_color": "#db0485",
+	"name": "Nino - Discord Moderation Bot",
+	"short_name": "Nino",
 	"display": "minimal-ui",
 	"start_url": "/",
 	"icons": [
