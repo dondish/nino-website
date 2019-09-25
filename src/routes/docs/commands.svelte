@@ -57,13 +57,10 @@
         color: var(--commands-color);
         background-color: var(--bg-alt);
         padding: 10px;
-        display: none;
+        display: block;
     }
     .dark .desc {
         background-color: var(--bg-alt-dark);
-    }
-    .cmd.active .desc {
-        display: block;
     }
     .desc ul {
         padding-left: 10px;
@@ -103,35 +100,38 @@
             <h1>Generic Commands</h1>
             <ul>
             {#each fgencmds as command, i}
-                <li class="cmd" class:active={bools[0][i]}>
+                <li class="cmd">
                     <h3 on:click={() => {bools[0][i] = !bools[0][i]}}>x!{command.name}
                     {#if command.args}{#each command.args.filter(arg => !arg.optional) as arg}&nbsp;[{arg.name}]{/each}{/if}
                     {#if command.flags}{#each command.flags.filter(arg => !arg.optional) as flag}&nbsp;[&lt;]--{flag.name}]{/each}{/if}
-                    <Icon style={`float:right;transform:rotate(${bools[0][i] ? "-90" : "0"}deg);`} data={chevronLeft}/></h3>
-
-                    <div class="desc">
-                    <span>{command.description}</span>
-                    {#if command.aliases.length > 0}<span><br>Aliases: {command.aliases.join(", ")}</span>{/if}
-                    {#if command.args}
-                    <h4><br>Argument{#if command.args.length > 1}s{/if}:</h4>
-                    <ul>
-                    {#each command.args as arg}
-                    <li><span>{arg.name}{#if arg.desc}&nbsp;- {arg.desc}{/if}{#if arg.optional}&nbsp;(Optional){/if}{#if arg.repeated}&nbsp;(Repeated){/if}</span></li>
-                    {/each}
-                    </ul>
+                    <Icon style={`float:right;transform:rotate(${bools[0][i] ? "-90" : "0"}deg);transition:transform 400ms;`} data={chevronLeft}/></h3>
+                    {#if bools[0][i]}
+                        <div class="desc" transition:slide>
+                            <span>{command.description}</span>
+                            {#if command.aliases.length > 0}
+                                <span><br>Aliases: {command.aliases.join(", ")}</span>
+                            {/if}
+                            {#if command.args}
+                                <h4><br>Argument{#if command.args.length > 1}s{/if}:</h4>
+                                <ul>
+                                    {#each command.args as arg}
+                                        <li><span>{arg.name}{#if arg.desc}&nbsp;- {arg.desc}{/if}{#if arg.optional}&nbsp;(Optional){/if}{#if arg.repeated}&nbsp;(Repeated){/if}</span></li>
+                                    {/each}
+                                </ul>
+                            {/if}
+                            {#if command.flags}
+                                <h4><br>Flag{#if command.flags.length > 1}s{/if}:</h4>
+                                <ul>
+                                    {#each command.flags as flag}
+                                        <li><span>{flag.name}{#if flag.desc}&nbsp;- {flag.desc}{/if}{#if flag.optional}&nbsp;(Optional){/if}</span></li>
+                                    {/each}
+                                </ul>
+                            {/if}
+                            {#if command.moreinfo}
+                                <a href={command.moreinfo} class="moreinfo">More Info</a>
+                            {/if}
+                        </div>
                     {/if}
-                    {#if command.flags}
-                    <h4><br>Flag{#if command.flags.length > 1}s{/if}:</h4>
-                    <ul>
-                    {#each command.flags as flag}
-                    <li><span>{flag.name}{#if flag.desc}&nbsp;- {flag.desc}{/if}{#if flag.optional}&nbsp;(Optional){/if}</span></li>
-                    {/each}
-                    </ul>
-                    {/if}
-                    {#if command.moreinfo}
-                    <a href={command.moreinfo} class="moreinfo">More Info</a>
-                    {/if}
-                    </div>
                 </li>
             {/each}
             </ul>
@@ -142,35 +142,38 @@
             <h1>Moderation Commands</h1>
             <ul>
             {#each fmodcmds as command, i}
-                <li class="cmd" class:active={bools[1][i]}>
+                <li class="cmd">
                     <h3 on:click={() => {bools[1][i] = !bools[1][i]}}>x!{command.name}
                     {#if command.args}{#each command.args.filter(arg => !arg.optional) as arg}&nbsp;[{arg.name}]{/each}{/if}
                     {#if command.flags}{#each command.flags.filter(arg => !arg.optional) as flag}&nbsp;[--{flag.name}]{/each}{/if}
-                    <Icon style={`float:right;transform:rotate(${bools[1][i] ? "-90" : "0"}deg);`} data={chevronLeft}/></h3>
-
-                    <div class="desc">
-                    <span>{command.description}</span>
-                    {#if command.aliases.length > 0}<span><br>Aliases: {command.aliases.join(", ")}</span>{/if}
-                    {#if command.args}
-                    <h4><br>Argument{#if command.args.length > 1}s{/if}:</h4>
-                    <ul>
-                    {#each command.args as arg}
-                    <li><span>{arg.name}{#if arg.desc}&nbsp;- {arg.desc}{/if}{#if arg.optional}&nbsp;(Optional){/if}{#if arg.repeated}&nbsp;(Repeated){/if}</span></li>
-                    {/each}
-                    </ul>
+                    <Icon style={`float:right;transform:rotate(${bools[1][i] ? "-90" : "0"}deg);transition:transform 400ms;`} data={chevronLeft}/></h3>
+                    {#if bools[1][i]}
+                        <div class="desc" transition:slide>
+                            <span>{command.description}</span>
+                            {#if command.aliases.length > 0}
+                                <span><br>Aliases: {command.aliases.join(", ")}</span>
+                            {/if}
+                            {#if command.args}
+                                <h4><br>Argument{#if command.args.length > 1}s{/if}:</h4>
+                                <ul>
+                                    {#each command.args as arg}
+                                        <li><span>{arg.name}{#if arg.desc}&nbsp;- {arg.desc}{/if}{#if arg.optional}&nbsp;(Optional){/if}{#if arg.repeated}&nbsp;(Repeated){/if}</span></li>
+                                    {/each}
+                                </ul>
+                            {/if}
+                            {#if command.flags}
+                                <h4><br>Flag{#if command.flags.length > 1}s{/if}:</h4>
+                                <ul>
+                                    {#each command.flags as flag}
+                                        <li><span>{flag.name}{#if flag.desc}&nbsp;- {flag.desc}{/if}{#if flag.optional}&nbsp;(Optional){/if}</span></li>
+                                    {/each}
+                                </ul>
+                            {/if}
+                            {#if command.moreinfo}
+                                <a href={command.moreinfo} class="moreinfo">More Info</a>
+                            {/if}
+                        </div>
                     {/if}
-                    {#if command.flags}
-                    <h4><br>Flag{#if command.flags.length > 1}s{/if}:</h4>
-                    <ul>
-                    {#each command.flags as flag}
-                    <li><span>{flag.name}{#if flag.desc}&nbsp;- {flag.desc}{/if}{#if flag.optional}&nbsp;(Optional){/if}</span></li>
-                    {/each}
-                    </ul>
-                    {/if}
-                    {#if command.moreinfo}
-                    <a href={command.moreinfo} class="moreinfo">More Info</a>
-                    {/if}
-                    </div>
                 </li>
             {/each}
             </ul>
@@ -180,6 +183,7 @@
 
 <script>
 import { getContext } from 'svelte';
+import { slide } from 'svelte/transition';
 import Icon from 'svelte-awesome/components/Icon.svelte'
 import { chevronLeft } from 'svelte-awesome/icons'
 let darkmode = getContext('darkmode')
