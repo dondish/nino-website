@@ -28,11 +28,12 @@
 		--bg-alt-dark: #222123;
 		--nav-menu: white;
 		--commands-color: white;
-		--font-primary: 'Pacifico', 'Dancing Script', 'Lobster', cursive;
+		--font-primary: 'Pacifico', cursive;
 		--font-secondary: 'Raleway', sans-serif, serif;  /* I really really like this font :)*/
+		--font-alt: 'Roboto Condensed', sans-serif;
 	}
 	main {
-		min-height: calc(100vh - 188px);
+		min-height: calc(100vh - 153px);
 		position: relative;
 		max-width: 100%;
 		color: var(--accent);

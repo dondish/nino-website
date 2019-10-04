@@ -45,6 +45,7 @@
         margin: 0;
         color: var(--commands-color);
         padding: 10px;
+        font-family: var(--font-alt);
         background-color: var(--primary);
     }
     .cmd h3:hover {

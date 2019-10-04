@@ -73,6 +73,8 @@
         </ul>
         <h2>How to add and remove punishments?</h2>
         <p><a href="/docs/gsettings">How to manage guild settings</a></p>
+        <h2>Some Notes</h2>
+        <p>You can have up to 15 punishments (in total)! but remember, some punishments can collide with others! Use them cautiously!</p>
     </section>
 </div>
 <script>

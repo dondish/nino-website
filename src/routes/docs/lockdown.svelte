@@ -23,7 +23,7 @@
         color: var(--commands-color);
         padding: 5px;
         border-radius: 3px;
-
+        font-family: var(--font-alt);
     }
     .dark .cmd {
         background: var(--bg-alt-dark);
@@ -52,7 +52,7 @@
     <h1>Lockdown</h1>
     <p>Raid prevention is fragile since raids can be conducted by a large group of long-time Discord users, catching them is between hard to impossible.<br>
     Nino provides a way for moderators to stop an ongoing raid using lockdown. Lock your channels for specific roles seamlessly.</p>
-    <h2 class="cmd">x!lockdown [channel], [channel] ... &lt;--roles=+role/-role/role ...&gt; &lt;--release&gt;</h2>
+    <h4 class="cmd">x!lockdown [channel], [channel] ... &lt;--roles=+role/-role/role ...&gt; &lt;--release&gt;</h4>
     <p>Locks down (or releases from a lock) one or more channels for one or more roles.</p>
     <h3>Argument</h3>
     <span>channel - A channel to lock down. (can be repeated for more than one channel). If one of the channels is the word 'all' it will lock or release all of the channels.</span>

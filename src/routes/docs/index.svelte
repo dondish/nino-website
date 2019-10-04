@@ -37,6 +37,10 @@
         background-color: var(--primary-dark);
 
     }
+    
+    p {
+        font-family: var(--font-secondary);
+    }
 
     @media screen and (max-width: 1300px) {
         .index {
@@ -80,13 +84,14 @@
     </div>
     <h1>Botlists (Please Support Us!)</h1>
     <div class="links">
-        <a role="button" class="doclink" href="/docs/botlists/dbl">Discord Bot List</a>
+        <a role="button" class="doclink" href="/docs/botlists/dbl">TOP.GG</a>
         <a role="button" class="doclink" href="/docs/botlists/dboats">Discord Boats</a>
         <a role="button" class="doclink" href="/docs/botlists/bfd">Bots For Discord</a>
         <a role="button" class="doclink" href="/docs/botlists/bspace">Botlist.Space</a>
-        <a role="button" class="doclink" href="/docs/botlists/bod">Bots On Discord</a>
-        <a role="button" class="doclink" href="/docs/botlists/dbgg">Discord Bots (.gg)</a>
+        <a role="button" class="doclink" href="/docs/">Bots On Discord*</a>
+        <a role="button" class="doclink" href="/docs/">Discord Bots (.gg)*</a>
     </div>
+    <p>* not there yet, waiting for verification.</p>
 </div>
 
 <script>
