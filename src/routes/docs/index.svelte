@@ -71,12 +71,12 @@
 <div class="index" class:dark={$darkmode}>
     <h1>How Can We Help You Today?</h1>
     <div class="links">
-        <a role="button" class="doclink" href="/docs/commands">Commands</a>
-        <a role="button" class="doclink" href="/docs/lockdown">Lockdown</a>
-        <a role="button" class="doclink" href="/docs/warnings">Warnings and Punishments</a>
-        <a role="button" class="doclink" href="/docs/gsettings">Guild Settings</a>
-        <a role="button" class="doclink" href="/docs/automod">Auto-Moderation</a>
-        <a role="button" class="doclink" href="/docs/dashboard">Web-Dashboard</a>
+        <a rel=prefetch role="button" class="doclink" href="/docs/commands">Commands</a>
+        <a rel=prefetch role="button" class="doclink" href="/docs/lockdown">Lockdown</a>
+        <a rel=prefetch role="button" class="doclink" href="/docs/warnings">Warnings and Punishments</a>
+        <a rel=prefetch role="button" class="doclink" href="/docs/gsettings">Guild Settings</a>
+        <a rel=prefetch role="button" class="doclink" href="/docs/automod">Auto-Moderation</a>
+        <a rel=prefetch role="button" class="doclink" href="/docs/dashboard">Web-Dashboard</a>
     </div>
     <h1>Botlists (Please Support Us!)</h1>
     <div class="links">

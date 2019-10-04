@@ -40,6 +40,12 @@
 	.dark .description a:hover {
 		color: var(--primary-dark);
 	}
+	a:any-link {
+        color: var(--accent);
+    }
+    .dark a:any-link{
+        color: var(--accent-dark);
+    }
 	@media screen and (max-width: 1256px) {
 		.index {
 			width: inherit;

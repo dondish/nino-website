@@ -44,6 +44,10 @@
         }
     }
 </style>
+<svelte:head>
+	<title>Lockdown - Nino - Discord Moderation Bot</title>
+	<meta property="og:title" content="Lockdown - Documentation - Nino - Discord Moderation Bot" />
+</svelte:head>
 <div class:dark={$darkmode} class="index">
     <h1>Lockdown</h1>
     <p>Raid prevention is fragile since raids can be conducted by a large group of long-time Discord users, catching them is between hard to impossible.<br>

@@ -66,6 +66,9 @@
         padding-left: 10px;
         list-style-type: disc;
     }
+    a:any-link {
+        color: var(--commands-color);
+    }
     @media screen and (max-width: 1300px) {
         .index {
             width: 100%;
@@ -100,7 +103,7 @@
             <h1>Generic Commands</h1>
             <ul>
             {#each fgencmds as command, i}
-                <li class="cmd">
+                <li class="cmd" id={command.name}>
                     <h3 on:click={() => {bools[0][i] = !bools[0][i]}}>x!{command.name}
                     {#if command.args}{#each command.args.filter(arg => !arg.optional) as arg}&nbsp;[{arg.name}]{/each}{/if}
                     {#if command.flags}{#each command.flags.filter(arg => !arg.optional) as flag}&nbsp;[&lt;]--{flag.name}]{/each}{/if}
@@ -142,7 +145,7 @@
             <h1>Moderation Commands</h1>
             <ul>
             {#each fmodcmds as command, i}
-                <li class="cmd">
+                <li class="cmd" id={command.name}>
                     <h3 on:click={() => {bools[1][i] = !bools[1][i]}}>x!{command.name}
                     {#if command.args}{#each command.args.filter(arg => !arg.optional) as arg}&nbsp;[{arg.name}]{/each}{/if}
                     {#if command.flags}{#each command.flags.filter(arg => !arg.optional) as flag}&nbsp;[--{flag.name}]{/each}{/if}
