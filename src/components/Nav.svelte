@@ -176,7 +176,7 @@ on:mousewheel={dependify(() => $menuon, preventDefault)}
 		<li><a class:selected={ !segment } href='.'>Home</a></li>
 		<li><a class:selected={ segment === "features" } href='features'>Features</a></li>
 		<li><a class:selected={ segment === "docs" } href='docs'>Documentation</a></li>
-		<li><a class:selected={ segment === "dashboard" } href='dashboard'>Dashboard</a></li>
+		<li><a class:selected={ segment === "dashboard" } href='dashboard' on:click={(event) => {event.preventDefault()}}>Dashboard</a></li>
 	</ul>
 	{/if}
 </nav>

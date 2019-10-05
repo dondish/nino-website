@@ -38,7 +38,7 @@
 		max-width: 100%;
 		color: var(--accent);
 		background-color: var(--bg);
-		padding: 2em;
+		padding: 2em 2em 0 2em;
 		margin: 0 auto;
 		box-sizing: border-box;
 	}
@@ -54,7 +54,7 @@
 <Nav {darkmode} {segment} bind:menuon={$menuon}/>
 
 <main class:menuon={$menuon} class:dark={$darkmode}>
-	<slot {darkmode}></slot>
+	<slot></slot>
 </main>
 
 <Footer {darkmode} />

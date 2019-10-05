@@ -77,10 +77,10 @@
     <div class="links">
         <a rel=prefetch role="button" class="doclink" href="/docs/commands">Commands</a>
         <a rel=prefetch role="button" class="doclink" href="/docs/lockdown">Lockdown</a>
-        <a rel=prefetch role="button" class="doclink" href="/docs/warnings">Warnings and Punishments</a>
+        <a rel=prefetch role="button" class="doclink" href="/docs/warnings">Warnings & Punishments</a>
         <a rel=prefetch role="button" class="doclink" href="/docs/gsettings">Guild Settings</a>
         <a rel=prefetch role="button" class="doclink" href="/docs/automod">Auto-Moderation</a>
-        <a rel=prefetch role="button" class="doclink" href="/docs/dashboard">Web-Dashboard</a>
+        <a rel=prefetch role="button" class="doclink" href="/docs/">Web-Dashboard**</a>
     </div>
     <h1>Botlists (Please Support Us!)</h1>
     <div class="links">
@@ -91,7 +91,7 @@
         <a role="button" class="doclink" href="/docs/">Bots On Discord*</a>
         <a role="button" class="doclink" href="/docs/">Discord Bots (.gg)*</a>
     </div>
-    <p>* not there yet, waiting for verification.</p>
+    <p>* not there yet, waiting for verification.<br>** soon.</p>
 </div>
 
 <script>
