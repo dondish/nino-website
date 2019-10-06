@@ -65,7 +65,7 @@ input:checked + .slider:before {
 </style>
 
 <label class="switch">
-  <input type="checkbox" bind:checked={checked}>
+  <input type="checkbox" bind:checked={checked} aria-label="Dark Mode">
   <span class="slider round"></span>
 </label>
 
