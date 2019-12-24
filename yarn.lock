@@ -1572,22 +1572,17 @@ supports-color@^6.1.0:
   dependencies:
     has-flag "^3.0.0"
 
-svelte-awesome@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/svelte-awesome/-/svelte-awesome-2.2.0.tgz#eb9c4f1aca464b1e897293f8e2f38667f525e58c"
-  integrity sha512-Z8Mk9lS+mjUNEwZPkxFyv9EMJRKsyOUuGymTcAGbxd8qBQExEs5j9XGRpXO7MBK4J5t2WrKWI8YkwfYLYC35Ew==
+svelte-awesome@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/svelte-awesome/-/svelte-awesome-2.2.1.tgz#976c05378ae4350e00f4551c9709a6309a8c56b3"
+  integrity sha512-CkGRVoMMLJsQ+TQpK+qOBAUH1Gl+l14EhX47KZA02XgXHahJZkRvLi4XAunBFcU+Zlik3oyxEnBvmT6BHF1CUA==
   dependencies:
-    svelte "^3.8.1"
+    svelte "^3.15.0"
 
-svelte@^3.0.0:
-  version "3.9.1"
-  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.9.1.tgz#f0dc0993d80e69da46f7b21d858895c37c2fd419"
-  integrity sha512-oy6FjffuCzPueBnzs8SxkV5VaOS+VX/eUywgE9LCA+skKdXt7wFlpKH3DNi1Uy+K23sb9bzlWxn0AaDQOnEUEw==
-
-svelte@^3.8.1:
-  version "3.12.1"
-  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.12.1.tgz#ddfacd43272ac3255907c682b74ee7d3d8b06b0c"
-  integrity sha512-t29WJNjHIqfrdMcVXqIyRfgLEaNz7MihKXTpb8qHlbzvf0WyOOIhIlwIGvl6ahJ9+9CLJwz0sjhFNAmPgo8BHg==
+svelte@^3.0.0, svelte@^3.15.0:
+  version "3.16.6"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.16.6.tgz#0caaec6515fe498bc5fe464cfccf8ce6a88be6c9"
+  integrity sha512-RnxbplgTNON+Xqc5FbSdCsXogeevtnmpNdXJJcUJZGOrNhPheU2hba8ot2h+ZmfzSWfkqd5e9FWibCeZ3L56TQ==
 
 terser@^3.14.1:
   version "3.17.0"
