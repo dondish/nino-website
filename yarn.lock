@@ -1282,9 +1282,9 @@ pify@^3.0.0:
   integrity sha1-5aSs0sEB/fPZpNB/DbxNtJ3SgXY=
 
 polka@next:
-  version "1.0.0-next.9"
-  resolved "https://registry.yarnpkg.com/polka/-/polka-1.0.0-next.9.tgz#04a6627c4149c283e8fa8f855178ba6401b51053"
-  integrity sha512-oAWH5O3CIPTzPKNx9KF9NDfy3KRyy9NtUhDEJGmMRCDT6s3CZaGDm7xafcKtm0uK6g0CBiNtoeGWpPFSLUXeaw==
+  version "1.0.0-next.10"
+  resolved "https://registry.yarnpkg.com/polka/-/polka-1.0.0-next.10.tgz#ab72d9f7c0195886a56000d2c05f9c15ee70c890"
+  integrity sha512-pugMNx3Qlg6C14gIdkLG3QgUhNDmKL+C4sUzinuS1NcQ/pRQdM1eTQnWQNzK1Pr0hJ1Ma7Wh37C7SQq6ApIp6A==
   dependencies:
     "@polka/url" "^1.0.0-next.9"
     trouter "^3.1.0"
