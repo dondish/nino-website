@@ -1672,10 +1672,10 @@ svelte-awesome@^2.2.1:
   dependencies:
     svelte "^3.15.0"
 
-svelte@^3.15.0, svelte@^3.17.1:
-  version "3.17.1"
-  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.17.1.tgz#71aedbfb5bf831dad7b00a944f2fdded6b482184"
-  integrity sha512-IjX6agpbu01VHBaL/12oFem+ufPRyZNLkg4ay7lJl7IbUB/er90kdIsWCNZX44XaniSEhG/0Hja4GsrtufTwCw==
+svelte@^3.15.0, svelte@^3.18.2:
+  version "3.18.2"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.18.2.tgz#f136b9e169049f8bb6a364bd8b8f3b619ed957d9"
+  integrity sha512-jRk7jdYULb9V4Z+0BKlfofombmdIIQph4leojrOSHzvZBRmCredz7fZsJBiUDLO6h83XYekuLbwfy5zx1i95GQ==
 
 terser@^4.6.2:
   version "4.6.3"
